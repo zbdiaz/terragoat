@@ -1,0 +1,173 @@
+{
+  "results": {
+    "violations": [
+      {
+        "rule_name": "reme_securityCenterPricingTier",
+        "description": "Ensure that standard pricing tiers are selected",
+        "rule_id": "AC_AZURE_0385",
+        "severity": "MEDIUM",
+        "category": "Security Best Practices",
+        "resource_name": "pricing",
+        "resource_type": "azurerm_security_center_subscription_pricing",
+        "module_name": "root",
+        "file": "security_center.tf",
+        "plan_root": "./",
+        "line": 1
+      },
+      {
+        "rule_name": "postgreSqlLogsEnabled",
+        "description": "Ensure server parameter 'log_checkpoints' is set to 'ON' for PostgreSQL Database Server",
+        "rule_id": "AC_AZURE_0409",
+        "severity": "MEDIUM",
+        "category": "Logging and Monitoring",
+        "resource_name": "example",
+        "resource_type": "azurerm_postgresql_configuration",
+        "module_name": "root",
+        "file": "sql.tf",
+        "plan_root": "./",
+        "line": 105
+      },
+      {
+        "rule_name": "reme_networkWatcherEnabled",
+        "description": "Enable Network Watcher for Azure subscriptions. Network diagnostic and visualization tools available with Network Watcher help users understand, diagnose, and gain insights to the network in Azure.",
+        "rule_id": "AC_AZURE_0418",
+        "severity": "HIGH",
+        "category": "Logging and Monitoring",
+        "resource_name": "flow_log",
+        "resource_type": "azurerm_network_watcher_flow_log",
+        "module_name": "root",
+        "file": "networking.tf",
+        "plan_root": "./",
+        "line": 125
+      },
+      {
+        "rule_name": "reme_noSecurityGroupAssociated",
+        "description": "Ensure that Azure Virtual Network subnet is configured with a Network Security Group",
+        "rule_id": "AC_AZURE_0356",
+        "severity": "MEDIUM",
+        "category": "Infrastructure Security",
+        "resource_name": "example",
+        "resource_type": "azurerm_subnet",
+        "module_name": "root",
+        "file": "networking.tf",
+        "plan_root": "./",
+        "line": 18
+      },
+      {
+        "rule_name": "reme_sqlServerADAdminConfigured",
+        "description": "Ensure that Azure Active Directory Admin is configured for SQL Server",
+        "rule_id": "AC_AZURE_0378",
+        "severity": "HIGH",
+        "category": "Identity and Access Management",
+        "resource_name": "example",
+        "resource_type": "azurerm_sql_server",
+        "module_name": "root",
+        "file": "sql.tf",
+        "plan_root": "./",
+        "line": 9
+      },
+      {
+        "rule_name": "reme_keyVaultAuditLoggingEnabled",
+        "description": "Ensure that logging for Azure KeyVault is 'Enabled'",
+        "rule_id": "AC_AZURE_0169",
+        "severity": "HIGH",
+        "category": "Logging and Monitoring",
+        "resource_name": "example",
+        "resource_type": "azurerm_key_vault",
+        "module_name": "root",
+        "file": "key_vault.tf",
+        "plan_root": "./",
+        "line": 1
+      },
+      {
+        "rule_name": "reme_connectionThrottling",
+        "description": "Ensure server parameter 'connection_throttling' is set to 'ON' for PostgreSQL Database Server",
+        "rule_id": "AC_AZURE_0414",
+        "severity": "MEDIUM",
+        "category": "Logging and Monitoring",
+        "resource_name": "thrtottling_config",
+        "resource_type": "azurerm_postgresql_configuration",
+        "module_name": "root",
+        "file": "sql.tf",
+        "plan_root": "./",
+        "line": 98
+      },
+      {
+        "rule_name": "kubeDashboardDisabled",
+        "description": "Ensure Kube Dashboard is disabled",
+        "rule_id": "AC_AZURE_0161",
+        "severity": "MEDIUM",
+        "category": "Infrastructure Security",
+        "resource_name": "k8s_cluster",
+        "resource_type": "azurerm_kubernetes_cluster",
+        "module_name": "root",
+        "file": "aks.tf",
+        "plan_root": "./",
+        "line": 1
+      },
+      {
+        "rule_name": "reme_geoRedundancyDisabled",
+        "description": "Ensure that Geo Redundant Backups is enabled on PostgreSQL",
+        "rule_id": "AC_AZURE_0407",
+        "severity": "MEDIUM",
+        "category": "Resilience",
+        "resource_name": "example",
+        "resource_type": "azurerm_postgresql_server",
+        "module_name": "root",
+        "file": "sql.tf",
+        "plan_root": "./",
+        "line": 73
+      },
+      {
+        "rule_name": "reme_resourceGroupLock",
+        "description": "Ensure that Azure Resource Group has resource lock enabled",
+        "rule_id": "AC_AZURE_0389",
+        "severity": "LOW",
+        "category": "Identity and Access Management",
+        "resource_name": "example",
+        "resource_type": "azurerm_resource_group",
+        "module_name": "root",
+        "file": "resource_group.tf",
+        "plan_root": "./",
+        "line": 1
+      },
+      {
+        "rule_name": "networkPolicyEnabled",
+        "description": "Ensure AKS cluster has Network Policy configured.",
+        "rule_id": "AC_AZURE_0158",
+        "severity": "MEDIUM",
+        "category": "Infrastructure Security",
+        "resource_name": "k8s_cluster",
+        "resource_type": "azurerm_kubernetes_cluster",
+        "module_name": "root",
+        "file": "aks.tf",
+        "plan_root": "./",
+        "line": 1
+      },
+      {
+        "rule_name": "reme_appGatewayWAFEnabled",
+        "description": "Ensure Azure Application Gateway Web application firewall (WAF) is enabled",
+        "rule_id": "AC_AZURE_0189",
+        "severity": "MEDIUM",
+        "category": "Infrastructure Security",
+        "resource_name": "network",
+        "resource_type": "azurerm_application_gateway",
+        "module_name": "root",
+        "file": "application_gateway.tf",
+        "plan_root": "./",
+        "line": 1
+      }
+    ],
+    "skipped_violations": null,
+    "scan_summary": {
+      "file/folder": "/var/jenkins_home/workspace/ejercicio4/terraform/azure",
+      "iac_type": "terraform",
+      "scanned_at": "2026-02-03 17:13:24.21785153 +0000 UTC",
+      "policies_validated": 78,
+      "violated_policies": 12,
+      "low": 1,
+      "medium": 8,
+      "high": 3
+    }
+  }
+}
